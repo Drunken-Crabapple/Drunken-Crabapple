@@ -1,0 +1,8 @@
+{
+    "username": "z..zzz",
+    "customer_code": "8384053A",
+    "email": "3299731622@qq.com",
+    "phone": "17584122826",
+    "company": "",
+    "license": "dXNlcm5hbWV8Y3VzdG9tZXJfY29kZXxlbWFpbHxwaG9uZXxjb21wYW55,qbBYqH8/IDlxmSPJunlvmK1tFQ6Z1eJ+K7IcTQArz2gYiagAXw/JUNN46xXdz4II8YEptkAiApda9vzKbpMAB+VGmQyv+wtiVamXfdnlsvz/JzGp7tuQEkNozzJajOFYN9uWJJufhn2Y2Dob3/4JB4eyiWGe6h6rDC2HDNlLDN4="
+}
