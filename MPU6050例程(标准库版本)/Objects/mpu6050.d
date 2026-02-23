@@ -2,7 +2,7 @@
 .\objects\mpu6050.o: .\Inc\MPU6050.h
 .\objects\mpu6050.o: .\Start\stm32f10x.h
 .\objects\mpu6050.o: .\Start\core_cm3.h
-.\objects\mpu6050.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mpu6050.o: D:\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\mpu6050.o: .\Start\system_stm32f10x.h
 .\objects\mpu6050.o: .\User\stm32f10x_conf.h
 .\objects\mpu6050.o: .\Library\stm32f10x_adc.h
@@ -31,6 +31,6 @@
 .\objects\mpu6050.o: .\Library\misc.h
 .\objects\mpu6050.o: .\Inc\_I2C_.h
 .\objects\mpu6050.o: .\Inc\generic.h
-.\objects\mpu6050.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\mpu6050.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\mpu6050.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\mpu6050.o: D:\ARM\ARMCC\Bin\..\include\math.h
+.\objects\mpu6050.o: D:\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\mpu6050.o: D:\ARM\ARMCC\Bin\..\include\stdio.h

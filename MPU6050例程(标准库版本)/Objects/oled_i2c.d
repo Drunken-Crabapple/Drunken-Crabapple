@@ -1,7 +1,7 @@
 .\objects\oled_i2c.o: Src\OLED_I2C.c
 .\objects\oled_i2c.o: .\Start\stm32f10x.h
 .\objects\oled_i2c.o: .\Start\core_cm3.h
-.\objects\oled_i2c.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\oled_i2c.o: D:\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled_i2c.o: .\Start\system_stm32f10x.h
 .\objects\oled_i2c.o: .\User\stm32f10x_conf.h
 .\objects\oled_i2c.o: .\Library\stm32f10x_adc.h
@@ -32,7 +32,7 @@
 .\objects\oled_i2c.o: .\Inc\OLED_Data.h
 .\objects\oled_i2c.o: .\Inc\_I2C_.h
 .\objects\oled_i2c.o: .\Inc\generic.h
-.\objects\oled_i2c.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\oled_i2c.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\oled_i2c.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\oled_i2c.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\oled_i2c.o: D:\ARM\ARMCC\Bin\..\include\string.h
+.\objects\oled_i2c.o: D:\ARM\ARMCC\Bin\..\include\math.h
+.\objects\oled_i2c.o: D:\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\oled_i2c.o: D:\ARM\ARMCC\Bin\..\include\stdarg.h

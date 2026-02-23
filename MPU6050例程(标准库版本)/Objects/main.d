@@ -1,7 +1,7 @@
 .\objects\main.o: User\main.c
 .\objects\main.o: .\Start\stm32f10x.h
 .\objects\main.o: .\Start\core_cm3.h
-.\objects\main.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Start\system_stm32f10x.h
 .\objects\main.o: .\User\stm32f10x_conf.h
 .\objects\main.o: .\Library\stm32f10x_adc.h
@@ -34,7 +34,7 @@
 .\objects\main.o: .\Inc\_I2C_.h
 .\objects\main.o: .\Inc\MPU6050.h
 .\objects\main.o: .\Inc\Serial.h
-.\objects\main.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\DMP\inv_mpu.h
 .\objects\main.o: .\DMP\inv_mpu_dmp_motion_driver.h
 .\objects\main.o: .\Inc\Kalman_filter.h

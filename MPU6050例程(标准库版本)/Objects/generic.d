@@ -1,7 +1,7 @@
 .\objects\generic.o: Src\generic.c
 .\objects\generic.o: .\Start\stm32f10x.h
 .\objects\generic.o: .\Start\core_cm3.h
-.\objects\generic.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\generic.o: D:\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\generic.o: .\Start\system_stm32f10x.h
 .\objects\generic.o: .\User\stm32f10x_conf.h
 .\objects\generic.o: .\Library\stm32f10x_adc.h

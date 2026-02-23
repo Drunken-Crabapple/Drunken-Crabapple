@@ -2,7 +2,7 @@
 .\objects\_i2c_.o: .\Inc\_I2C_.h
 .\objects\_i2c_.o: .\Start\stm32f10x.h
 .\objects\_i2c_.o: .\Start\core_cm3.h
-.\objects\_i2c_.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\_i2c_.o: D:\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\_i2c_.o: .\Start\system_stm32f10x.h
 .\objects\_i2c_.o: .\User\stm32f10x_conf.h
 .\objects\_i2c_.o: .\Library\stm32f10x_adc.h
@@ -30,4 +30,4 @@
 .\objects\_i2c_.o: .\Library\stm32f10x_wwdg.h
 .\objects\_i2c_.o: .\Library\misc.h
 .\objects\_i2c_.o: .\Inc\generic.h
-.\objects\_i2c_.o: D:\EXE_Data\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\_i2c_.o: D:\ARM\ARMCC\Bin\..\include\stdlib.h
