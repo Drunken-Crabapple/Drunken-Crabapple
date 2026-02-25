@@ -75,3 +75,5 @@
 ..\..\output\main.o: ..\..\Drivers\./SYSTEM/delay/delay.h
 ..\..\output\main.o: ..\..\Drivers\./BSP/SPI/spi.h
 ..\..\output\main.o: ..\..\Drivers\./BSP/ICM/icm.h
+..\..\output\main.o: ..\..\Drivers\./BSP/Mahony/Mahony.h
+..\..\output\main.o: ..\..\Drivers\./BSP/TIMER/btim.h

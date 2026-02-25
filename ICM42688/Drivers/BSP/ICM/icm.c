@@ -4,7 +4,7 @@
 #include "./SYSTEM/delay/delay.h"
 
 extern SPI_HandleTypeDef g_spi2_handle;
-
+#define DEG_TO_RAD  0.01745329251f
 void icm_cs_init(void)
 {
     spi2_init();
@@ -87,18 +87,18 @@ void icm_init(void)
     SPI2_ReadWriteBytes(ACCEL_CONFIG0,0x66,0,1);        //设置加速度计量程为+-2g    ODR为1kHz
 }
 
-void icm_getdata(float *temp,float *ax,float *ay,float *az,
+void icm_getdata(float *ax,float *ay,float *az,
                  float *gx,float *gy,float *gz)
 {
-    uint8_t data[14] = {0};
-    SPI2_ReadWriteBytes(TEMP_DATA_H,0,data,14);
-    *temp = ( ( (int16_t)((data[0] << 8) | data[1]) ) / 132.48 ) + 25;
-    *ax = ( (int16_t) ((data[2] << 8) | data[3]) ) / 16384.0f;
-    *ay = ( (int16_t) ((data[4] << 8) | data[5]) ) / 16384.0f;
-    *az = ( (int16_t) ((data[6] << 8) | data[7]) ) / 16384.0f;
+    uint8_t data[12] = {0};
+    SPI2_ReadWriteBytes(ACCEL_DATA_X_H,0,data,12);
+//    *temp = ( ( (int16_t)((data[0] << 8) | data[1]) ) / 132.48 ) + 25;
+    *ax = ( (int16_t) ((data[0] << 8) | data[1]) ) / 16384.0f;
+    *ay = ( (int16_t) ((data[2] << 8) | data[3]) ) / 16384.0f;
+    *az = ( (int16_t) ((data[4] << 8) | data[5]) ) / 16384.0f;
     
-    *gx = ( (int16_t) ((data[8] << 8) | data[9]) ) / 65.536;
-    *gy = ( (int16_t) ((data[10] << 8) | data[11]) ) / 65.536;
-    *gz = ( (int16_t) ((data[12]<< 8) | data[13])) / 65.536;
+    *gx = ( (int16_t) ((data[6] << 8) | data[7]) ) / 65.536f * DEG_TO_RAD;  //从dps转为rad/s
+    *gy = ( (int16_t) ((data[8] << 8) | data[9]) ) / 65.536f * DEG_TO_RAD;
+    *gz = ( (int16_t) ((data[10]<< 8) | data[11])) / 65.536f * DEG_TO_RAD;
 }
 

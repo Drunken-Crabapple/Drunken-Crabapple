@@ -5,6 +5,8 @@
 "..\..\output\system_stm32f4xx.o"
 "..\..\output\spi.o"
 "..\..\output\icm.o"
+"..\..\output\mahony.o"
+"..\..\output\btim.o"
 "..\..\output\delay.o"
 "..\..\output\sys.o"
 "..\..\output\usart.o"
