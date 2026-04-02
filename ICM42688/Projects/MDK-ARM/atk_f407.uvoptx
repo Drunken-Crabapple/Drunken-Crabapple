@@ -279,8 +279,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\Drivers\BSP\Mahony\Mahony.c</PathWithFileName>
-      <FilenameWithoutPath>Mahony.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\Drivers\BSP\TIMER\btim.c</PathWithFileName>
+      <FilenameWithoutPath>btim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -291,8 +291,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\Drivers\BSP\TIMER\btim.c</PathWithFileName>
-      <FilenameWithoutPath>btim.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\Drivers\BSP\Imux\Imux.c</PathWithFileName>
+      <FilenameWithoutPath>Imux.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

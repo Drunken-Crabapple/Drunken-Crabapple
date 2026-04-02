@@ -1,19 +1,9 @@
 #include "./BSP/TIMER/btim.h"
-#include "./BSP/Mahony/Mahony.h"
 #include "./BSP/ICM/icm.h"
 #include "./SYSTEM/usart/usart.h"
 
 
 TIM_HandleTypeDef g_tim6_cnt_handle;
-float ax = 0;
-float ay = 0;
-float az = 0;
-float gx = 0;
-float gy = 0;
-float gz = 0;
-float roll = 0;
-float yaw = 0;
-float pitch = 0;
 
 void btim_tim6_cnt_init(void)
 {
@@ -42,20 +32,23 @@ void TIM6_DAC_IRQHandler(void)
     HAL_TIM_IRQHandler(&g_tim6_cnt_handle);
 }
 
+uint16_t times;
+uint8_t tim_1ms_flag;
+uint8_t tim_2ms_flag;
+uint8_t tim_100ms_flag;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if(htim->Instance == TIM6)
     {
-        icm_getdata(&ax,&ay,&az,&gx,&gy,&gz);
-        MahonyAHRSinit(ax,ay,az,0,0,0);
-
-        Mahony_update(gx,gy,gz,ax,ay,az,0,0,0);
-        Mahony_computeAngles();
-        roll = getRoll();
-        pitch = getPitch();
-        yaw = getYaw();
-        //printf("%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",ax,ay,az,gx,gy,gz,roll,pitch,yaw);
-        printf("%f,%f,%f\r\n",roll,pitch,yaw);
-
+        times++;
+        tim_1ms_flag = 1;
+        if(times %2 == 0)
+        {
+            tim_2ms_flag = 1;
+        }
+        if(times %100 == 0)
+        {
+            tim_100ms_flag = 1;
+        }
     }
 }

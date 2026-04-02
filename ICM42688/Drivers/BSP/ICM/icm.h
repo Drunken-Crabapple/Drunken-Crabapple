@@ -10,8 +10,10 @@ uint8_t SPI2_ReadWriteBytes(uint8_t addr,uint8_t ptxdata,uint8_t *prxdata,uint16
 void icm_cs_init(void);
 uint8_t ICM_ReadID(void);
 void icm_init(void);
-void icm_getdata(float *ax,float *ay,float *az,
-                 float *gx,float *gy,float *gz);
+void Do_ACC_GYRO_Offset(void);
+void ACC_GYRO_Offset(void);
+void READ_ICM42688(void);
+void sensor_data_prepare(void);
 
 
 #endif

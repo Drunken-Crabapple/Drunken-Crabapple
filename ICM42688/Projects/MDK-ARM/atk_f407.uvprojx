@@ -421,14 +421,14 @@
               <FilePath>..\..\Drivers\BSP\ICM\icm.c</FilePath>
             </File>
             <File>
-              <FileName>Mahony.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Drivers\BSP\Mahony\Mahony.c</FilePath>
-            </File>
-            <File>
               <FileName>btim.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\BSP\TIMER\btim.c</FilePath>
+            </File>
+            <File>
+              <FileName>Imux.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\BSP\Imux\Imux.c</FilePath>
             </File>
           </Files>
         </Group>
