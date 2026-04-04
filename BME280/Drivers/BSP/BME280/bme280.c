@@ -16,8 +16,8 @@ void bme280_cs_init(void)
 }
 
 /*
-返回值为0：正常
-返回值为1：错误
+    返回值为0：正常
+    返回值为1：错误
 */
 uint8_t SPI2_ReadWriteBytes(uint8_t addr,uint8_t ptxdata,uint8_t *prxdata,uint16_t datasize)
 {

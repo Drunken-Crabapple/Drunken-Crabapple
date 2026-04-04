@@ -411,14 +411,19 @@
           <GroupName>Drivers/BSP</GroupName>
           <Files>
             <File>
+              <FileName>bme280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\BSP\BME280\bme280.c</FilePath>
+            </File>
+            <File>
               <FileName>SPI.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\BSP\SPI\SPI.c</FilePath>
             </File>
             <File>
-              <FileName>bme280.c</FileName>
+              <FileName>btim.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Drivers\BSP\BME280\bme280.c</FilePath>
+              <FilePath>..\..\Drivers\BSP\TIMER\btim.c</FilePath>
             </File>
           </Files>
         </Group>
