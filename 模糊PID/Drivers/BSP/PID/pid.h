@@ -11,19 +11,18 @@ typedef struct
 
     float out_min;
     float out_max;
-    float integral_min;
-    float integral_max;
 }Pidparams_t;
 
 typedef struct 
 {
     float target;
     float current;
+    float difout;
     float out;
 
-    float error;
-    float last_error;
-    float integral;
+    float error0;
+    float error1;
+    float error2;
 
     float kp;
     float ki;
@@ -31,8 +30,6 @@ typedef struct
 
     float out_min;
     float out_max;
-    float integral_min;
-    float integral_max;
 }PID_t;
 
 void pid_reset(PID_t *pid);

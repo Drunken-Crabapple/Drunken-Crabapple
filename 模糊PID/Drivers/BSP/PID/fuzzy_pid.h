@@ -18,6 +18,7 @@
 typedef struct 
 {
     float Ke;       // 误差e的输入缩放  (把实际误差 e 映射到模糊论域)
+    float ke_last;
     float Kec;      // 误差变化率ec的输入缩放
 
     float Kp_out;   // dkp 的输出缩放   (把模糊推理结果映射回真实PID参数增量)

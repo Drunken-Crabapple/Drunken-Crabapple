@@ -154,6 +154,7 @@ void fuzzy_pid_init(FuzzyPID_t *fuzzy,
 {
     fuzzy->Ke = ke;
     fuzzy->Kec = kec;
+    fuzzy->ke_last = 0.0f;
 
     fuzzy->Kp_out = kp_out;
     fuzzy->Ki_out = ki_out;
@@ -202,9 +203,10 @@ float fuzzy_pid_calculate_output(FuzzyPID_t *fuzzy,PID_t *pid,const Pidparams_t 
     float delta_kd = 0.0f;
 
     e = pid->target - current;
-    ec = e - pid->last_error;
+    ec = e - fuzzy->ke_last;
 
     fuzzy_pid_calculate(fuzzy,e,ec,&delta_kp,&delta_ki,&delta_kd);
+    fuzzy->ke_last = e;
 
     pid->kp = base_params->kp + delta_kp;
     pid->ki = base_params->ki + delta_ki;

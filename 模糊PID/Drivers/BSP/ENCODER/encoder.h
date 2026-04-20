@@ -6,7 +6,7 @@
 #define GEAR_RATIO          9.6f      // 减速比 1:9.6
 #define ENCODER_PPR         11.0f     // 编码器线数
 #define ENCODER_X4          4.0f      // 四倍频
-#define SAMPLE_TIME_S       0.005f    // 5ms
+#define SAMPLE_TIME_S       0.1f    // 100ms
 
 typedef struct 
 {
@@ -21,7 +21,7 @@ extern encoder_speed encoder2_speed;
 
 void encoder1_tim3_init(void);
 void encoder2_tim4_init(void);
-void motor1_encoder_speed_update(void);
+int16_t motor1_encoder_speed_update(void);
 void motor2_encoder_speed_update(void);
 
 #endif

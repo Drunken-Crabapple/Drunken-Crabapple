@@ -36,20 +36,18 @@ void TIM6_DAC_IRQHandler(void)
 
 float current_motor1 = 0.0f;
 float current_motor2 = 0.0f;
+int32_t flag = 0;
+float current_temp = 0.0f;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if(htim->Instance == TIM6)
     {
-        motor1_encoder_speed_update();
-        motor2_encoder_speed_update();
-        current_motor1 = encoder1_speed.motor_rpm;
-        current_motor2 = encoder2_speed.motor_rpm;
-        //pid_calculate(&pid_motor1,current_motor1);
-        //pid_calculate(&pid_motor2,current_motor2);
+        flag++;
+        //pid_calculate(&pid_motor1);   
         //motor1_set_speed((int16_t)pid_motor1.out);
-        //motor2_set_speed((int16_t)pid_motor2.out);
 
+        current_motor1 = motor1_encoder_speed_update();
         motor1_set_speed((int16_t)fuzzy_pid_calculate_output(&fuzzy_motor1,&pid_motor1,&pid_params_motor,current_motor1));
-        motor2_set_speed((int16_t)fuzzy_pid_calculate_output(&fuzzy_motor2,&pid_motor2,&pid_params_motor,current_motor2));
+        //motor2_set_speed((int16_t)fuzzy_pid_calculate_output(&fuzzy_motor2,&pid_motor2,&pid_params_motor,current_motor2));
     }
 }

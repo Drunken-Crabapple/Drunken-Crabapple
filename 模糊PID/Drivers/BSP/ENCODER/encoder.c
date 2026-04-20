@@ -111,15 +111,12 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef *htim)
     }
 }
 
-void motor1_encoder_speed_update(void)
+int16_t motor1_encoder_speed_update(void)
 {
-    uint16_t now_cnt;
-    now_cnt = (uint16_t)__HAL_TIM_GET_COUNTER(&g_tim3_encoder1_handle);
-    encoder1_speed.encoder_diff = (int16_t)(now_cnt - encoder1_speed.encoder_last);
-    encoder1_speed.encoder_last = now_cnt;
-
-    encoder1_speed.motor_rps = (float)encoder1_speed.encoder_diff / (SAMPLE_TIME_S * GEAR_RATIO * ENCODER_PPR * ENCODER_X4);
-    encoder1_speed.motor_rpm = encoder1_speed.motor_rps * 60.0f;
+    int16_t temp = 0;
+    temp = __HAL_TIM_GET_COUNTER(&g_tim3_encoder1_handle);
+    __HAL_TIM_SET_COUNTER(&g_tim3_encoder1_handle,0);
+    return temp;
 }
 
 void motor2_encoder_speed_update(void)
